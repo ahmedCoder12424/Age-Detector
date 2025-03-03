@@ -31,7 +31,7 @@ class AgeDataset(torch.utils.data.Dataset):
         self.age_ranges = ["0-4", "5-9", "10-14", "15-19", "20-24", "25-29",
                    "30-34", "35-39", "40-44", "45-49", "50-54", "55-59",
                    "60-64", "65-69", "70-74", "75-79", "80-84", "85-89",
-                   "90-94", "95-99", "100-105", "105-110", "110-115", "115-120"]
+                   "90-94", "95-99", "100-104", "105-109", "110-114", "115-119"]
 
         # Create a dictionary to map each age range to an index
         self.age_to_index = {age: i for i, age in enumerate(self.age_ranges)}
