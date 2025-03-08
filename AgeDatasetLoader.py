@@ -38,5 +38,8 @@ class AgeDataset(torch.utils.data.Dataset):
         age_range = self.data.iloc[idx]["label"]  # Assume the column already contains age ranges
         age_index = self.age_to_index[age_range]  # Get the index
         age_onehot = F.one_hot(torch.tensor(age_index), num_classes=len(self.age_ranges)).float()
+
+        #age_index = self.age_to_index[age_range]  # Get the index (integer)
         
-        return pixels, age_onehot
+        return pixels, torch.tensor(age_index, dtype=torch.long) 
+        
